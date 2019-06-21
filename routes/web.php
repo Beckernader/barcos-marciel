@@ -1,5 +1,11 @@
 <?php
 
+Route::get('/artisan/storage', function() {
+    $command = 'storage:link';
+    $result = Artisan::call($command);
+    return Artisan::output();
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
