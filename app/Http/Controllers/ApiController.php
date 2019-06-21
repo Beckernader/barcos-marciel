@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Barco;
+use App\Api;
 
 class ApiController extends Controller
 {
