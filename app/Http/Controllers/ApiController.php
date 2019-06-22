@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Barco;
+use App\Marca;
 
 class ApiController extends Controller
 {
     public function index()
     {
        $barcos = Barco::orderBy('modelo')->get();
+       $marcas = Marca::orderBy('nome')->get();  
        return response()
               ->json($barcos, 200, [], JSON_PRETTY_PRINT);        
     }
