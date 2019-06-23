@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-sm-6">
             <p>* Campos Requeridos</p>
-            <form method="post" class="form-group" action="{{route('proposta_alugar.store')}}">
+            <form method="post" class="form-group" action="{{route('proposta.store')}}">
             {{ csrf_field() }}
 
                 <label for="nome" class="mr-sm-2">*Nome: </label>

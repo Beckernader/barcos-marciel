@@ -11,7 +11,6 @@ class ApiController extends Controller
     public function index()
     {
        $barcos = Barco::orderBy('modelo')->get();
-       $marcas = Marca::orderBy('nome')->get();  
        return response()
               ->json($barcos, 200, [], JSON_PRETTY_PRINT);        
     }
@@ -23,7 +22,7 @@ class ApiController extends Controller
        $inc = Barco::create($dados);
 
        if ($inc) {
-           return response()->json([$inc], 201);
+           return response()->json($inc, 201, [], JSON_PRETTY_PRINT);
        } else {
            return response()
                   ->json(['erro'=>'error_insert'],500);
